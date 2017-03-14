@@ -26,7 +26,9 @@ var util = require('util');
  */
 module.exports = {
   hello: hello,
-  registration: registration
+  registration,
+  getUser,
+  getUsers
 };
 
 /*
@@ -49,4 +51,116 @@ function registration(req, res) {
     name: req.body.name,
     email: req.body.email
   });
+}
+
+function getUser(req, res) {
+  var userId = req.swagger.params.id.value;
+
+  res.json({
+    id: userId,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  });
+}
+
+function getUsers(req, res) {
+  res.json([{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 2,
+    name: 'Gábor',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  },{
+    id: 1,
+    name: 'Lajos',
+    email: 'lajos@example.com',
+    gender: 0,
+    birthName: 'Béla'
+  }]);
 }
